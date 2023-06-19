@@ -1,0 +1,42 @@
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cardContainer{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    padding: 2rem;
+}
+
+.tittle{
+    font-size: 60px;;
+}
+
+.tittleGridContainer{
+
+ display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textFieldSearch{
+    width: 40%;
+}
+
+.searchButton{
+    margin-left: 5px !important;
+}
+
+.buttonsContainer{
+
+    padding-top: 30px;
+
+}
+.icon{
+    font-size: 4rem !important;
+}

@@ -1,17 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Home from './pages/Home';
+import {Home} from './pages/Home';
+import {Results} from './pages/Results';
+import { MovieDetail } from './pages/MovieDetail';
 
 const App = ({ store }) => (
 	<Provider store={store}>
-		<Router>
-			<div>
-				<Route exact path="/" component={Home} />
-			</div>
-		</Router>
+		<BrowserRouter>
+			<Routes>
+				<Route  path="/" element={<Home/>} />
+				<Route  path="/results" element={<Results/>} />
+				<Route  path="/movie/:id" element={<MovieDetail/>} />
+
+			</Routes>
+		</BrowserRouter>
 	</Provider>
 );
 

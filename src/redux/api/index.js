@@ -1,9 +1,11 @@
-const axios = require('axios');
+import axios from 'axios'
 
-export const getDemo = params => {
-	const URL = 'https://reactjsteachingproj.herokuapp.com/users';
 
-	return axios.get(URL).then(response => {
-		return response.data;
-	});
-};
+const baseURL = 'https://www.omdbapi.com/?apiKey=ffd0c3a5';
+
+export const apiCall = (url, data, headers, method) =>axios({
+    method,
+    url: baseURL + url,
+    data,
+    headers
+})
